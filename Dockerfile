@@ -16,7 +16,7 @@ RUN rm apache-tomcat-9.0.73.tar.gz
 
 RUN apt update -y
 RUN apt install -y curl
-
+WORKDIR foodies1/
 COPY target/foodies.war ${TOMCAT_HOME}/webapps
 COPY run.sh /tmp
 RUN chmod u+x ${TOMCAT_HOME}/bin/startup.sh
